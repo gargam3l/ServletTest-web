@@ -20,12 +20,12 @@ public class TestServlet extends HttpServlet {
 
   public void doGet(HttpServletRequest req, HttpServletResponse res)
                                throws ServletException, IOException {
-   
+   DBLogic db= new DBLogic();
        res.setContentType("text/plain");
     PrintWriter out = res.getWriter();
-    //DBLogic.kapcsolatNyit();
-    //out.println(DBLogic.kapcsolatTeszt());
-    //DBLogic.kapcsolatZár();
-    out.println("Hello world!");
+    //db.kapcsolatNyit();
+    out.println(db.kapcsolatTeszt());
+    //db.kapcsolatZár();
+    //out.println("Hello world!");
   }
 }
